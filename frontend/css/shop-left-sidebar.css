@@ -13,8 +13,8 @@ body {
   justify-content: center;
   align-items: center;
   width: 100%;
-  flex-shrink: 1;
   background-color: #7e33e0;
+  height: 45px;
 }
 .header-bar .header-bar-core {
   display: flex;
@@ -47,29 +47,41 @@ body {
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  max-width: 450px;
+  max-width: 430px;
   width: 100%;
 }
-.header-bar .header-bar-core .login .login-infor, .header-bar .header-bar-core .login .cart {
+.header-bar .header-bar-core .login .login-infor {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   gap: 15px;
   cursor: pointer;
 }
-.header-bar .header-bar-core .login .login-infor .login-unit, .header-bar .header-bar-core .login .cart .login-unit {
-  display: flex;
+.header-bar .header-bar-core .login .login-infor select {
   font-size: 16px;
   font-weight: 600;
   line-height: 100%;
-  letter-spacing: 0;
+  letter-spacing: 0%;
   color: #f1f1f1;
-  gap: 2px;
+  border: none;
+  background-color: #7e33e0;
 }
-.header-bar .header-bar-core .login .cart {
-  justify-content: center;
+.header-bar .header-bar-core .login .login-infor select:focus {
+  outline: none;
 }
-.header-bar .header-bar-core .login .cart i {
+.header-bar .header-bar-core .login .login-infor > a {
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 100%;
+  letter-spacing: 0%;
+  color: #f1f1f1;
+  text-decoration: none;
+}
+.header-bar .header-bar-core .login > a {
+  cursor: pointer;
+  text-decoration: none;
+}
+.header-bar .header-bar-core .login > a i {
   display: flex;
   font-size: 16px;
   font-weight: 600;
@@ -112,15 +124,30 @@ body {
   text-decoration: none;
   gap: 35px;
 }
-.home-nav .home-nav-core .home-nav-core-left .home-nav-core-a .home, .home-nav .home-nav-core .home-nav-core-left .home-nav-core-a a, .home-nav .home-nav-core .home-nav-core-left .home-nav-core-a a a, .home-nav .home-nav-core .home-nav-core-left .home-nav-core-a .home a, .home-nav .home-nav-core .home-nav-core-left .home-nav-core-a a a, .home-nav .home-nav-core .home-nav-core-left .home-nav-core-a a a a {
+.home-nav .home-nav-core .home-nav-core-left .home-nav-core-a .home-nav-item {
+  display: inline-flex;
+  align-items: center;
   color: #fb2e86;
   text-decoration: none;
 }
-.home-nav .home-nav-core .home-nav-core-left .home-nav-core-a .home i, .home-nav .home-nav-core .home-nav-core-left .home-nav-core-a a i, .home-nav .home-nav-core .home-nav-core-left .home-nav-core-a a a i {
-  cursor: pointer;
-}
-.home-nav .home-nav-core .home-nav-core-left .home-nav-core-a a {
+.home-nav .home-nav-core .home-nav-core-left .home-nav-core-a .home-nav-item > a {
   color: #0d0e43;
+  text-decoration: none;
+}
+.home-nav .home-nav-core .home-nav-core-left .home-nav-core-a .home-nav-item > i {
+  display: none;
+  color: #fb2e86;
+}
+.home-nav .home-nav-core .home-nav-core-left .home-nav-core-a .home-nav-item {
+  /* active */
+}
+.home-nav .home-nav-core .home-nav-core-left .home-nav-core-a .home-nav-item.active a {
+  color: #fb2e86;
+  text-decoration: none;
+}
+.home-nav .home-nav-core .home-nav-core-left .home-nav-core-a .home-nav-item.active i {
+  display: inline;
+  color: #fb2e86;
 }
 .home-nav .home-nav-core .search {
   display: flex;
@@ -333,10 +360,10 @@ body {
   font-size: 8px;
   color: #603eff;
 }
-.product-infor .product-infor-core .infor .infor-unit1 .infor-unit-core .infor-detail .check1-3, .product-infor .product-infor-core .infor .infor-unit4 .infor-unit-core .infor-detail .check1-3, .product-infor .product-infor-core .infor .infor-unit6 .infor-unit-core .infor-detail .check1-3, .product-infor .product-infor-core .infor .infor-unit5 .infor-unit-core .infor-detail .check1-3, .product-infor .product-infor-core .infor .infor-unit3 .infor-unit-core .infor-detail .check1-3, .product-infor .product-infor-core .infor .infor-unit2 .infor-unit-core .infor-detail .check1-3 {
+.product-infor .product-infor-core .infor .infor-unit1 .infor-unit-core .infor-detail .check.check1-active, .product-infor .product-infor-core .infor .infor-unit4 .infor-unit-core .infor-detail .check.check1-active, .product-infor .product-infor-core .infor .infor-unit6 .infor-unit-core .infor-detail .check.check1-active, .product-infor .product-infor-core .infor .infor-unit5 .infor-unit-core .infor-detail .check.check1-active, .product-infor .product-infor-core .infor .infor-unit3 .infor-unit-core .infor-detail .check.check1-active, .product-infor .product-infor-core .infor .infor-unit2 .infor-unit-core .infor-detail .check.check1-active {
   background-color: #603eff;
 }
-.product-infor .product-infor-core .infor .infor-unit1 .infor-unit-core .infor-detail .check1-3 i, .product-infor .product-infor-core .infor .infor-unit4 .infor-unit-core .infor-detail .check1-3 i, .product-infor .product-infor-core .infor .infor-unit6 .infor-unit-core .infor-detail .check1-3 i, .product-infor .product-infor-core .infor .infor-unit5 .infor-unit-core .infor-detail .check1-3 i, .product-infor .product-infor-core .infor .infor-unit3 .infor-unit-core .infor-detail .check1-3 i, .product-infor .product-infor-core .infor .infor-unit2 .infor-unit-core .infor-detail .check1-3 i {
+.product-infor .product-infor-core .infor .infor-unit1 .infor-unit-core .infor-detail .check.check1-active i, .product-infor .product-infor-core .infor .infor-unit4 .infor-unit-core .infor-detail .check.check1-active i, .product-infor .product-infor-core .infor .infor-unit6 .infor-unit-core .infor-detail .check.check1-active i, .product-infor .product-infor-core .infor .infor-unit5 .infor-unit-core .infor-detail .check.check1-active i, .product-infor .product-infor-core .infor .infor-unit3 .infor-unit-core .infor-detail .check.check1-active i, .product-infor .product-infor-core .infor .infor-unit2 .infor-unit-core .infor-detail .check.check1-active i {
   color: #ffffff;
 }
 .product-infor .product-infor-core .infor .infor-unit1 .infor-unit-core .infor-detail span, .product-infor .product-infor-core .infor .infor-unit4 .infor-unit-core .infor-detail span, .product-infor .product-infor-core .infor .infor-unit6 .infor-unit-core .infor-detail span, .product-infor .product-infor-core .infor .infor-unit5 .infor-unit-core .infor-detail span, .product-infor .product-infor-core .infor .infor-unit3 .infor-unit-core .infor-detail span, .product-infor .product-infor-core .infor .infor-unit2 .infor-unit-core .infor-detail span {
@@ -360,6 +387,12 @@ body {
   font-size: 8px;
   color: #ff3eb2;
 }
+.product-infor .product-infor-core .infor .infor-unit2 .check2.check4-active {
+  background-color: #ff3eb2;
+}
+.product-infor .product-infor-core .infor .infor-unit2 .check2.check4-active i {
+  color: #ffffff;
+}
 .product-infor .product-infor-core .infor .infor-unit3 .check3 {
   display: flex;
   justify-content: center;
@@ -373,10 +406,10 @@ body {
   font-size: 8px;
   color: #ffcc2e;
 }
-.product-infor .product-infor-core .infor .infor-unit3 .check3-native {
+.product-infor .product-infor-core .infor .infor-unit3 .check3.check3-active {
   background-color: #ffcc2e;
 }
-.product-infor .product-infor-core .infor .infor-unit3 .check3-native i {
+.product-infor .product-infor-core .infor .infor-unit3 .check3.check3-active i {
   color: #ffffff;
 }
 .product-infor .product-infor-core .infor .infor-unit3 .star1, .product-infor .product-infor-core .infor .infor-unit3 .star3, .product-infor .product-infor-core .infor .infor-unit3 .star4, .product-infor .product-infor-core .infor .infor-unit3 .star2 {
@@ -417,10 +450,10 @@ body {
   font-size: 8px;
   color: #ff3eb2;
 }
-.product-infor .product-infor-core .infor .infor-unit4 .check4-native, .product-infor .product-infor-core .infor .infor-unit6 .check4-native, .product-infor .product-infor-core .infor .infor-unit5 .check4-native {
+.product-infor .product-infor-core .infor .infor-unit4 .check4.check4-active, .product-infor .product-infor-core .infor .infor-unit6 .check4.check4-active, .product-infor .product-infor-core .infor .infor-unit5 .check4.check4-active {
   background-color: #ff3eb2;
 }
-.product-infor .product-infor-core .infor .infor-unit4 .check4-native i, .product-infor .product-infor-core .infor .infor-unit6 .check4-native i, .product-infor .product-infor-core .infor .infor-unit5 .check4-native i {
+.product-infor .product-infor-core .infor .infor-unit4 .check4.check4-active i, .product-infor .product-infor-core .infor .infor-unit6 .check4.check4-active i, .product-infor .product-infor-core .infor .infor-unit5 .check4.check4-active i {
   color: #ffffff;
 }
 .product-infor .product-infor-core .infor .infor-unit4 .check4-hidden, .product-infor .product-infor-core .infor .infor-unit6 .check4-hidden, .product-infor .product-infor-core .infor .infor-unit5 .check4-hidden {

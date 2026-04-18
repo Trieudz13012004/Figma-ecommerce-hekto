@@ -36,22 +36,24 @@
         </div>
         <div class="login">
           <div class="login-infor">
-            <div class="login-unit">
-              <span>English</span>
-              <i class="fa-solid fa-caret-down"></i>
-            </div>
-            <div class="login-unit">
-              <span>USD</span>
-              <i class="fa-solid fa-caret-down"></i>
-            </div>
-            <div class="login-unit">
-              <span>Login</span>
-              <i class="fa-regular fa-user"></i>
-            </div>
+            <select name="language" id="language">
+              <option value="english">English</option>
+              <option value="vietnamese">Vietnamese</option>
+            </select>
+            <select name="money" id="money">
+              <option value="usd">USD</option>
+              <option value="euro">€</option>
+              <option value="pound">£</option>
+            </select>
+            <a href="../customer/my-account.html">
+              Login <i class="fa-regular fa-user"></i>
+            </a>
           </div>
           <div class="cart">
             <i class="fa-regular fa-heart"></i>
-            <i class="fa-solid fa-cart-shopping"></i>
+            <a href="../shopping/shopping-cart.html">
+              <i class="fa-solid fa-cart-shopping"></i>
+            </a>
           </div>
         </div>
       </div>
@@ -61,15 +63,30 @@
         <div class="home-nav-core-left">
           <h2>Hekto</h2>
           <div class="home-nav-core-a">
-            <div class="home">
-              <a href="#">Home</a>
+            <div class="home-nav-item">
+              <a href="../shopping/home-page.html">Home</a>
               <i class="fa-solid fa-caret-down"></i>
             </div>
-            <a href="#">Pages</a>
-            <a href="#">Products</a>
-            <a href="#">Blog</a>
-            <a href="#">Shop</a>
-            <a href="#">Contact</a>
+            <div class="home-nav-item">
+              <a href="../shopping/grid-default.html">Pages</a>
+              <i class="fa-solid fa-caret-down"></i>
+            </div>
+            <div class="home-nav-item">
+              <a href="../shopping/product-detail.html">Products</a>
+              <i class="fa-solid fa-caret-down"></i>
+            </div>
+            <div class="home-nav-item">
+              <a href="../customer/blog-page.html">Blog</a>
+              <i class="fa-solid fa-caret-down"></i>
+            </div>
+            <div class="home-nav-item">
+              <a href="../shopping/shop-list.html">Shop</a>
+              <i class="fa-solid fa-caret-down"></i>
+            </div>
+            <div class="home-nav-item">
+              <a href="../seller/contact-us.html">Contact</a>
+              <i class="fa-solid fa-caret-down"></i>
+            </div>
           </div>
         </div>
         <form class="search">
@@ -91,7 +108,7 @@
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Magna in
               est adipiscing in phasellus non in justo.
             </p>
-            <button>Shop Now</button>
+            <a href="./grid-default.html">Shop Now</a>
           </div>
         </div>
         <div class="cover-right">
@@ -131,14 +148,20 @@
           <div class="product">
             <div class="img-product2">
               <div class="nav-product2">
-                <i class="fa-solid fa-cart-shopping"></i>
-                <i class="fa-regular fa-heart"></i>
-                <i class="fa-solid fa-magnifying-glass-plus"></i>
+                <a href="./shopping-cart.html" target="_blank">
+                  <i class="fa-solid fa-cart-shopping"></i>
+                </a>
+                <a href="./shop-list.html" target="_blank">
+                  <i class="fa-regular fa-heart"></i>
+                </a>
+                <a href="#">
+                  <i class="fa-solid fa-magnifying-glass-plus"></i>
+                </a>
               </div>
               <div class="img">
                 <img src="../asset/home-page/featured-2.png" alt="#" />
               </div>
-              <button>View Details</button>
+              <a href="./product-detail.html">View Details</a>
             </div>
             <p>Cantilever chair</p>
             <div class="img-product-nav">
@@ -195,7 +218,7 @@
           <a href="#">New Arrival</a>
           <a href="#">Best Seller</a>
           <a href="#">Featured</a>
-          <a href="#">Special Offer</a>
+          <a href="#offer">Special Offer</a>
         </div>
         <div class="latest-products-1">
           <div class="product">
@@ -216,9 +239,15 @@
             <div class="img-product-2">
               <span class="sale-tag">Sale</span>
               <div class="nav-product2">
-                <i class="fa-solid fa-cart-shopping"></i>
-                <i class="fa-regular fa-heart"></i>
-                <i class="fa-solid fa-magnifying-glass-plus"></i>
+                <a href="./shopping-cart.html">
+                  <i class="fa-solid fa-cart-shopping"></i>
+                </a>
+                <a href="./shop-list.html">
+                  <i class="fa-regular fa-heart"></i>
+                </a>
+                <a href="#">
+                  <i class="fa-solid fa-magnifying-glass-plus"></i>
+                </a>
               </div>
               <div class="img">
                 <img src="../asset/home-page/latest-2.png" alt="#" />
@@ -293,37 +322,37 @@
         </div>
       </div>
     </section>
-    <section class="shopex-offer">
+    <section id="offer" class="shopex-offer">
       <div class="shopex-offer-core">
         <h2>What Shopex Offer!</h2>
         <div class="shopex-offer-products">
-          <div class="product">
-            <i class="fa-solid fa-truck-moving"></i>
-            <h6>24/7 Support</h6>
+          <div class="product1">
+            <i class="fa-solid fa-truck"></i>
+            <span>24/7 Support</span>
             <p>
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Massa
               purus gravida.
             </p>
           </div>
-          <div class="product">
-            <i class="fa-solid fa-money-bill-1"></i>
-            <h6>24/7 Support</h6>
+          <div class="product2">
+            <i class="fa-solid fa-hand-holding-dollar"></i>
+            <span>24/7 Support</span>
             <p>
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Massa
               purus gravida.
             </p>
           </div>
-          <div class="product">
-            <i class="fa-solid fa-medal"></i>
-            <h6>24/7 Support</h6>
+          <div class="product3">
+            <i class="fa-solid fa-award"></i>
+            <span>24/7 Support</span>
             <p>
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Massa
               purus gravida.
             </p>
           </div>
-          <div class="product">
-            <i class="fa-solid fa-phone"></i>
-            <h6>24/7 Support</h6>
+          <div class="product4">
+            <i class="fa-solid fa-phone-flip"></i>
+            <span>24/7 Support</span>
             <p>
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Massa
               purus gravida.
@@ -359,7 +388,7 @@
             </div>
           </div>
           <div class="price">
-            <button>Add To Cart</button>
+            <a href="./shopping-cart.html" target="_blank">Add To Cart</a>
             <div class="bb">
               <span>B&B Italian Sofa </span>
               <span>$32.00</span>
@@ -425,7 +454,7 @@
           <div class="trending-product2">
             <div class="trending-coupon">
               <p>23% off in all products</p>
-              <a href="#">Shop Now</a>
+              <a href="../shopping/grid-default.html">Shop Now</a>
             </div>
             <div class="trending-clock">
               <img src="../asset/home-page/trending-clock.png" alt="#" />
@@ -434,7 +463,7 @@
           <div class="trending-product2">
             <div class="trending-coupon">
               <p>23% off in all products</p>
-              <a href="#">View Collection</a>
+              <a href="../shopping/shop-list.html">View Collection</a>
             </div>
             <div class="trending-box">
               <img src="../asset/home-page/trending-box.png" alt="#" />
@@ -484,7 +513,7 @@
         <div class="discount-nav">
           <a href="#">Wood Chair .</a>
           <a href="#">Plastic Chair</a>
-          <a href="#">Sofa Collection</a>
+          <a href="../shopping/shop-list.html">Sofa Collection</a>
         </div>
         <div class="discount-main">
           <div class="discount-infor">
@@ -516,7 +545,7 @@
                 </div>
               </div>
             </div>
-            <button>Shop Now</button>
+            <a href="./grid-default.html">Shop Now</a>
           </div>
           <div class="discount-product">
             <img src="../asset/home-page/discount-sofa.png" alt="#" />
@@ -535,7 +564,7 @@
                   <img src="../asset/home-page/categories-1.png" alt="#" />
                 </div>
               </div>
-              <button>View Shop</button>
+              <a href="./shop-list.html">View Shop</a>
             </div>
             <span>Mini LCW Chair</span>
             <span>$56.00</span>
@@ -581,7 +610,7 @@
           <img src="../asset/home-page/newslate-cover.jpg" alt="#" />
           <div class="newslater-infor">
             <h3>Get Leatest Update By Subscribe 0ur Newslater</h3>
-            <button>Shop Now</button>
+            <a href="./grid-default.html">Shop Now</a>
           </div>
         </div>
         <div class="newslater-bottom">
@@ -671,7 +700,7 @@
           <div class="hekto">
             <h3>Hekto</h3>
             <form action="">
-              <input type="email" placeholder="Enter Email Address">
+              <input type="email" placeholder="Enter Email Address" />
               <button>Sign Up</button>
             </form>
             <div class="contact-infor">
@@ -710,12 +739,19 @@
         <div class="footer-bottom-core">
           <span>©Webecy - All Rights Reserved</span>
           <div class="footer-icon">
-            <div class="footer-icon-unit"><a href="#"><i class="fa-brands fa-facebook-f"></i></a></div>
-            <div class="footer-icon-unit"><a href="#"><i class="fa-brands fa-instagram"></i></a></div>
-            <div class="footer-icon-unit"><a href="#"><i class="fa-brands fa-twitter"></i></a></div>
+            <div class="footer-icon-unit">
+              <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+            </div>
+            <div class="footer-icon-unit">
+              <a href="#"><i class="fa-brands fa-instagram"></i></a>
+            </div>
+            <div class="footer-icon-unit">
+              <a href="#"><i class="fa-brands fa-twitter"></i></a>
+            </div>
           </div>
         </div>
       </div>
     </footer>
+    <script src="../logic-js/home-page.js"></script>
   </body>
 </html>

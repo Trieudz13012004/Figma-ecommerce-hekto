@@ -28,8 +28,8 @@ body {
   justify-content: center;
   align-items: center;
   width: 100%;
-  flex-shrink: 1;
   background-color: $header-background-color;
+  height: 45px;
   .header-bar-core {
     display: flex;
     flex-direction: row;
@@ -71,19 +71,30 @@ body {
         justify-content: space-between;
         gap: 15px;
         cursor: pointer;
-        .login-unit {
-          display: flex;
-          font-size: $font-family-size;
+        select {
+          font-size: 16px;
           font-weight: 600;
           line-height: 100%;
-          letter-spacing: 0;
-          color: $font-color;
-          gap: 2px;
+          letter-spacing: 0%;
+          color: #f1f1f1;
+          border: none;
+          background-color: #7e33e0;
+        }
+        select:focus {
+          outline: none;
+        }
+        > a {
+          font-size: 16px;
+          font-weight: 600;
+          line-height: 100%;
+          letter-spacing: 0%;
+          color: #f1f1f1;
+          text-decoration: none;
         }
       }
-      .cart {
-        @extend .login-infor;
-        justify-content: center;
+      > a {
+        cursor: pointer;
+        text-decoration: none;
         i {
           display: flex;
           font-size: $font-family-size;
@@ -126,19 +137,30 @@ body {
         align-items: center;
         text-decoration: none;
         gap: 35px;
-        .home {
+        .home-nav-item {
+          display: inline-flex;
+          align-items: center;
           color: $button-color;
           text-decoration: none;
-          a {
-            @extend .home;
+          > a {
+            color: $title-color;
+            text-decoration: none;
           }
-          i {
-            cursor: pointer;
+          > i {
+            display: none;
+            color: $button-color;
           }
-        }
-        a {
-          @extend .home;
-          color: $title-color;
+          /* active */
+          &.active {
+            a {
+              color: $button-color;
+              text-decoration: none;
+            }
+            i {
+              display: inline;
+              color: $button-color;
+            }
+          }
         }
       }
     }
@@ -345,11 +367,11 @@ body {
                 font-size: 8px;
                 color: #603eff;
               }
-            }
-            .check1-3 {
-              background-color: #603eff;
-              i {
-                color: #ffffff;
+              &.check1-active {
+                background-color: #603eff;
+                i {
+                  color: #ffffff;
+                }
               }
             }
             span {
@@ -377,6 +399,12 @@ body {
             font-size: 8px;
             color: #ff3eb2;
           }
+          &.check4-active {
+            background-color: #ff3eb2;
+            i {
+              color: #ffffff;
+            }
+          }
         }
       }
       .infor-unit3 {
@@ -393,11 +421,11 @@ body {
             font-size: 8px;
             color: #ffcc2e;
           }
-        }
-        .check3-native {
-          background-color: #ffcc2e;
-          i {
-            color: #ffffff;
+          &.check3-active {
+            background-color: #ffcc2e;
+            i {
+              color: #ffffff;
+            }
           }
         }
         .star1 {
@@ -449,11 +477,11 @@ body {
             font-size: 8px;
             color: #ff3eb2;
           }
-        }
-        .check4-native {
-          background-color: #ff3eb2;
-          i {
-            color: #ffffff;
+          &.check4-active {
+            background-color: #ff3eb2;
+            i {
+              color: #ffffff;
+            }
           }
         }
         .check4-hidden {

@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Shop List</title>
     <link rel="stylesheet" href="../css/shop-list.css" />
+    <link rel="stylesheet" href="../css/home-page.css" />
     <!-- Google Font -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -36,26 +37,23 @@
         </div>
         <div class="login">
           <div class="login-infor">
-            <div class="login-unit">
-              <span>English</span>
-              <i class="fa-solid fa-caret-down"></i>
-            </div>
-            <div class="login-unit">
-              <span>USD</span>
-              <i class="fa-solid fa-caret-down"></i>
-            </div>
-            <div class="login-unit">
-              <span>Login</span>
-              <i class="fa-regular fa-user"></i>
-            </div>
-            <div class="login-unit">
-              <span>Wishlist</span>
-              <i class="fa-regular fa-heart"></i>
-            </div>
+            <select name="language" id="language">
+              <option value="english">English</option>
+              <option value="vietnamese">Vietnamese</option>
+            </select>
+            <select name="money" id="money">
+              <option value="usd">USD</option>
+              <option value="euro">€</option>
+              <option value="pound">£</option>
+            </select>
+            <a href="../customer/my-account.html">
+              Login <i class="fa-regular fa-user"></i>
+            </a>
+            <a href="#"> Wishlist <i class="fa-regular fa-heart"></i> </a>
           </div>
-          <div class="cart">
+          <a href="../shopping/shopping-cart.html">
             <i class="fa-solid fa-cart-shopping"></i>
-          </div>
+          </a>
         </div>
       </div>
     </header>
@@ -64,15 +62,30 @@
         <div class="home-nav-core-left">
           <h2>Hekto</h2>
           <div class="home-nav-core-a">
-            <div class="home">
-              <a href="#">Home</a>
+            <div class="home-nav-item">
+              <a href="../shopping/home-page.html">Home</a>
               <i class="fa-solid fa-caret-down"></i>
             </div>
-            <a href="#">Pages</a>
-            <a href="#">Products</a>
-            <a href="#">Blog</a>
-            <a href="#">Shop</a>
-            <a href="#">Contact</a>
+            <div class="home-nav-item">
+              <a href="../shopping/grid-default.html">Pages</a>
+              <i class="fa-solid fa-caret-down"></i>
+            </div>
+            <div class="home-nav-item">
+              <a href="../shopping/product-detail.html">Products</a>
+              <i class="fa-solid fa-caret-down"></i>
+            </div>
+            <div class="home-nav-item">
+              <a href="../customer/blog-page.html">Blog</a>
+              <i class="fa-solid fa-caret-down"></i>
+            </div>
+            <div class="home-nav-item">
+              <a href="../shopping/shop-list.html">Shop</a>
+              <i class="fa-solid fa-caret-down"></i>
+            </div>
+            <div class="home-nav-item">
+              <a href="../seller/contact-us.html">Contact</a>
+              <i class="fa-solid fa-caret-down"></i>
+            </div>
           </div>
         </div>
         <form class="search">
@@ -412,7 +425,7 @@
     </section>
     <section class="brand">
       <div class="brand-core">
-        <img src="../asset/shop-list/brand.png" alt="#">
+        <img src="../asset/shop-list/brand.png" alt="#" />
       </div>
     </section>
     <footer class="footer">
@@ -421,7 +434,7 @@
           <div class="hekto">
             <h3>Hekto</h3>
             <form action="">
-              <input type="email" placeholder="Enter Email Address">
+              <input type="email" placeholder="Enter Email Address" />
               <button>Sign Up</button>
             </form>
             <div class="contact-infor">
@@ -460,12 +473,19 @@
         <div class="footer-bottom-core">
           <span>©Webecy - All Rights Reserved</span>
           <div class="footer-icon">
-            <div class="footer-icon-unit"><a href="#"><i class="fa-brands fa-facebook-f"></i></a></div>
-            <div class="footer-icon-unit"><a href="#"><i class="fa-brands fa-instagram"></i></a></div>
-            <div class="footer-icon-unit"><a href="#"><i class="fa-brands fa-twitter"></i></a></div>
+            <div class="footer-icon-unit">
+              <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+            </div>
+            <div class="footer-icon-unit">
+              <a href="#"><i class="fa-brands fa-instagram"></i></a>
+            </div>
+            <div class="footer-icon-unit">
+              <a href="#"><i class="fa-brands fa-twitter"></i></a>
+            </div>
           </div>
         </div>
       </div>
     </footer>
+    <script src="../logic-js/home-page.js"></script>
   </body>
 </html>

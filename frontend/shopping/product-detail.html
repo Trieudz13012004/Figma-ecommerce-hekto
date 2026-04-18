@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Product Details</title>
     <link rel="stylesheet" href="../css/product-detail.css" />
+    <link rel="stylesheet" href="../css/home-page.css" />
     <!-- Google Font -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -36,26 +37,23 @@
         </div>
         <div class="login">
           <div class="login-infor">
-            <div class="login-unit">
-              <span>English</span>
-              <i class="fa-solid fa-caret-down"></i>
-            </div>
-            <div class="login-unit">
-              <span>USD</span>
-              <i class="fa-solid fa-caret-down"></i>
-            </div>
-            <div class="login-unit">
-              <span>Login</span>
-              <i class="fa-regular fa-user"></i>
-            </div>
-            <div class="login-unit">
-              <span>Wishlist</span>
-              <i class="fa-regular fa-heart"></i>
-            </div>
+            <select name="language" id="language">
+              <option value="english">English</option>
+              <option value="vietnamese">Vietnamese</option>
+            </select>
+            <select name="money" id="money">
+              <option value="usd">USD</option>
+              <option value="euro">€</option>
+              <option value="pound">£</option>
+            </select>
+            <a href="../customer/my-account.html">
+              Login <i class="fa-regular fa-user"></i>
+            </a>
+            <a href="#"> Wishlist <i class="fa-regular fa-heart"></i> </a>
           </div>
-          <div class="cart">
+          <a href="../shopping/shopping-cart.html">
             <i class="fa-solid fa-cart-shopping"></i>
-          </div>
+          </a>
         </div>
       </div>
     </header>
@@ -64,15 +62,30 @@
         <div class="home-nav-core-left">
           <h2>Hekto</h2>
           <div class="home-nav-core-a">
-            <div class="home">
-              <a href="#">Home</a>
+            <div class="home-nav-item">
+              <a href="../shopping/home-page.html">Home</a>
               <i class="fa-solid fa-caret-down"></i>
             </div>
-            <a href="#">Pages</a>
-            <a href="#">Products</a>
-            <a href="#">Blog</a>
-            <a href="#">Shop</a>
-            <a href="#">Contact</a>
+            <div class="home-nav-item">
+              <a href="../shopping/grid-default.html">Pages</a>
+              <i class="fa-solid fa-caret-down"></i>
+            </div>
+            <div class="home-nav-item">
+              <a href="../shopping/product-detail.html">Products</a>
+              <i class="fa-solid fa-caret-down"></i>
+            </div>
+            <div class="home-nav-item">
+              <a href="../customer/blog-page.html">Blog</a>
+              <i class="fa-solid fa-caret-down"></i>
+            </div>
+            <div class="home-nav-item">
+              <a href="../shopping/shop-list.html">Shop</a>
+              <i class="fa-solid fa-caret-down"></i>
+            </div>
+            <div class="home-nav-item">
+              <a href="../seller/contact-us.html">Contact</a>
+              <i class="fa-solid fa-caret-down"></i>
+            </div>
           </div>
         </div>
         <form class="search">
@@ -226,7 +239,9 @@
         <h2>Related Products</h2>
         <div class="product">
           <div class="product-unit">
-            <div class="img"><img src="../asset/product-detail/related-1.jpg" alt="#"></div>
+            <div class="img">
+              <img src="../asset/product-detail/related-1.jpg" alt="#" />
+            </div>
             <div class="name">
               <span>Mens Fashion Wear</span>
               <div class="star1">
@@ -240,7 +255,9 @@
             <span>$43.00</span>
           </div>
           <div class="product-unit">
-            <div class="img"><img src="../asset/product-detail/related-2.jpg" alt="#"></div>
+            <div class="img">
+              <img src="../asset/product-detail/related-2.jpg" alt="#" />
+            </div>
             <div class="name">
               <span>Women’s Fashion</span>
               <div class="star2">
@@ -254,7 +271,9 @@
             <span>$67.00</span>
           </div>
           <div class="product-unit">
-            <div class="img"><img src="../asset/product-detail/related-3.jpg" alt="#"></div>
+            <div class="img">
+              <img src="../asset/product-detail/related-3.jpg" alt="#" />
+            </div>
             <div class="name">
               <span>Wolx Dummy Fashion</span>
               <div class="star3">
@@ -268,7 +287,9 @@
             <span>$67.00</span>
           </div>
           <div class="product-unit">
-            <div class="img"><img src="../asset/product-detail/related-4.jpg" alt="#"></div>
+            <div class="img">
+              <img src="../asset/product-detail/related-4.jpg" alt="#" />
+            </div>
             <div class="name">
               <span>Top Wall Digital Clock</span>
               <div class="star4">
@@ -347,5 +368,6 @@
         </div>
       </div>
     </footer>
+    <script src="../logic-js/home-page.js"></script>
   </body>
 </html>
